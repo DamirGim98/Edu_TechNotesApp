@@ -9,7 +9,7 @@ const SignTokens = (username, roles) => {
       },
     },
     process.env.ACCESS_TOKEN_SECRET,
-    { expiresIn: "30s" }
+    { expiresIn: "15m" }
   );
 };
 
@@ -19,7 +19,7 @@ const SignRefreshToken = (username) => {
       username,
     },
     process.env.REFRESH_TOKEN_SECRET,
-    { expiresIn: "1d" }
+    { expiresIn: "7d" }
   );
 };
 
